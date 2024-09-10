@@ -1,41 +1,45 @@
+import numpy as np
 import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
 
-def create_grid(extent, grid_spacing):
-    """
-    Creates a grid on a map.
+# Define the boundaries of the Indian Ocean
+# Latitude range: from -60° (south) to 30° (north)
+# Longitude range: from 20° E (west) to 120° E (east)
+latitude_range = (-60, 30)
+longitude_range = (20, 120)
 
-    Args:
-        extent: The extent of the map as a tuple (min_lon, max_lon, min_lat, max_lat).
-        grid_spacing: The spacing between grid lines in degrees.
-    """
+# Define the size of each grid cell in degrees
+cell_size_lat = 1  # 1 degree latitude per grid cell
+cell_size_lon = 1  # 1 degree longitude per grid cell
 
-    # Set up the map projection
-    proj = ccrs.PlateCarree()
+# Create arrays for latitudes and longitudes
+latitudes = np.arange(latitude_range[0], latitude_range[1], cell_size_lat)
+longitudes = np.arange(longitude_range[0], longitude_range[1], cell_size_lon)
 
-    # Create the figure and axes
-    fig, ax = plt.subplots(subplot_kw={'projection': proj})
+# Create grid cells as (latitude, longitude) pairs (bottom-left corner of each cell)
+grid_cells = [(lat, lon) for lat in latitudes for lon in longitudes]
 
-    # Draw the coastlines
-    ax.coastlines()
+# Display total number of grid cells
+print(f"Total number of grid cells: {len(grid_cells)}")
 
-    # Create the grid
-    lon_min, lon_max, lat_min, lat_max = extent
-    lon_ticks = np.arange(lon_min, lon_max + grid_spacing, grid_spacing)
-    lat_ticks = np.arange(lat_min, lat_max + grid_spacing, grid_spacing)
+# Optional: Plot the grid on a map for visualization
+def plot_grid():
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.set_title('Indian Ocean Grid System')
 
-    ax.set_xticks(lon_ticks)
-    ax.set_yticks(lat_ticks)
-    ax.grid(True, linestyle='--')
+    # Plot grid lines
+    for lat in latitudes:
+        ax.plot([longitude_range[0], longitude_range[1]], [lat, lat], color='blue', linewidth=0.5)
+    for lon in longitudes:
+        ax.plot([lon, lon], [latitude_range[0], latitude_range[1]], color='blue', linewidth=0.5)
 
-    # Set the map extent
-    ax.set_extent(extent)
+    # Set the axis limits and labels
+    ax.set_xlim(longitude_range)
+    ax.set_ylim(latitude_range)
+    ax.set_xlabel('Longitude')
+    ax.set_ylabel('Latitude')
 
-    # Show the plot
     plt.show()
 
-# Example usage
-extent = (30, 100, -30, 30)  # Extent of the Indian Ocean
-grid_spacing = 10  # Grid spacing in degrees
-
-create_grid(extent, grid_spacing)
+# Call the plot function to visualize the grid
+plot_grid()
+ 
