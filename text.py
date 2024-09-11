@@ -42,4 +42,4 @@ def plot_grid():
 
 # Call the plot function to visualize the grid
 plot_grid()
- 
+  
