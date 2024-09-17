@@ -41,5 +41,5 @@ def plot_grid():
     plt.show()
 
 # Call the plot function to visualize the grid
-plot_grid() 
+plot_grid()  
   
