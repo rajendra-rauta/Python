@@ -9,6 +9,7 @@ print(new_data)
 
 
       
+      
 print(data)
 print(type(data))
 f.close()
