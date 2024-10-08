@@ -46,7 +46,7 @@ def visualize_path(grid, path, start, goal):
     grid = np.array(grid)
     for (x, y) in path:
         grid[x, y] = 2  # Mark the path
-    grid[start[0], start[1]] = 3  # Mark the start
+    grid[start[1], start[1]] = 3 # Mark the start
     grid[goal[0], goal[1]] = 4  # Mark the goal
     
     # Define a custom color map
@@ -75,7 +75,7 @@ grid = [
 
 # Define start and goal positions
 start = (0, 0)
-goal = (9, 9)
+goal = (9, 2)
 
 # Run the A* algorithm
 path = a_star(grid, start, goal)
