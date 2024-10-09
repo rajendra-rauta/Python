@@ -12,3 +12,4 @@ print(type(data))
 f.close()
 
  
+
