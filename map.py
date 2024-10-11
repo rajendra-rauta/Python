@@ -17,7 +17,7 @@ def set_cell_cost(grid, x, y, wind, waves, currents):
     grid[y, x] = total_cost
 
 # Initialize environmental factors
-wind = np.random.rand(grid_size, grid_size)  # Random wind costs
+wind = np.random.rand(grid_size, grid_size)  # Random wind costs 
 waves = np.random.rand(grid_size, grid_size)  # Random wave costs
 currents = np.random.rand(grid_size, grid_size)  # Random current costs
 
