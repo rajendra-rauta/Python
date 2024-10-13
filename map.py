@@ -22,7 +22,7 @@ waves = np.random.rand(grid_size, grid_size)  # Random wave costs
 currents = np.random.rand(grid_size, grid_size)  # Random current costs
 
 # Set costs in the grid
-for y in range(grid_size):
+for y in range(grid_size):  
     for x in range(grid_size):
         set_cell_cost(grid, x, y, wind, waves, currents)
 
