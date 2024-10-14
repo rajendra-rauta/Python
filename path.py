@@ -18,7 +18,7 @@ def a_star(grid, start, goal):
     while open_list:
         _, current = heapq.heappop(open_list)
         
-        if current == goal:
+        if current == goal: 
             path = []
             while current in came_from:
                 path.append(current)
