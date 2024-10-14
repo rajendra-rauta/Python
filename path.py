@@ -22,7 +22,7 @@ def a_star(grid, start, goal):
             path = []
             while current in came_from:
                 path.append(current)
-                current = came_from[current]
+                current = came_from[current] 
             path.append(start)
             path.reverse()
             return path
