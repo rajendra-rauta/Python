@@ -21,7 +21,7 @@ def a_star(grid, start, goal):
         if current == goal: 
             path = []
             while current in came_from:  
-                path.append(current)
+                path.append(current) 
                 current = came_from[current] 
             path.append(start) 
             path.reverse()  
@@ -79,7 +79,7 @@ goal = (9, 2)
 
 # Run the A* algorithm
 path = a_star(grid, start, goal)
-
+ 
 if path:
     print("Path found:", path)
     visualize_path(grid, path, start, goal)
