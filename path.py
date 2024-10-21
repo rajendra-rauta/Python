@@ -16,12 +16,12 @@ def a_star(grid, start, goal):
     came_from = {}
     
     while open_list:
-        _, current = heapq.heappop(open_list)
+        _, current = heapq.heappop(open_list) 
         
         if current == goal: 
             path = []
             while current in came_from:  
-                path.append(current) 
+                path.append(current)
                 current = came_from[current] 
             path.append(start) 
             path.reverse()  
