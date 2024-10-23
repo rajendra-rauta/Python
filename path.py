@@ -53,7 +53,7 @@ def visualize_path(grid, path, start, goal):
     cmap = plt.cm.get_cmap('Accent', 5)
     bounds = [0, 1, 2, 3, 4]
     norm = plt.Normalize(vmin=0, vmax=4)
-    
+     
     plt.imshow(grid, cmap=cmap, norm=norm)
     plt.colorbar(ticks=[0, 1, 2, 3, 4], format=plt.FuncFormatter(lambda val, loc: ['Empty', 'Obstacle', 'Path', 'Start', 'Goal'][int(val)]))
     plt.title("D* Pathfinding Visualization")
