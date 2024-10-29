@@ -51,7 +51,7 @@ def visualize_path(grid, path, start, goal):
     
     # Define a custom color map
     cmap = plt.cm.get_cmap('Accent', 5)
-    bounds = [0, 1, 2, 3, 4] 
+    bounds = [0, 1, 2, 3, 4]  
     norm = plt.Normalize(vmin=0, vmax=4)
      
     plt.imshow(grid, cmap=cmap, norm=norm)
@@ -85,3 +85,4 @@ if path:
     visualize_path(grid, path, start, goal)
 else:
     print("No path found")
+    
