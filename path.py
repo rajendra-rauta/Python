@@ -47,7 +47,7 @@ def visualize_path(grid, path, start, goal):
     for (x, y) in path:  
         grid[x, y] = 2  # Mark the path
     grid[start[1], start[1]] = 3 # Mark the start
-    grid[goal[0], goal[1]] = 4  # Mark the goal
+    grid[goal[0], goal[1]] = 4  # Mark the goal 
     
     # Define a custom color map
     cmap = plt.cm.get_cmap('Accent', 5)
