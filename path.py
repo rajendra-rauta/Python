@@ -49,7 +49,7 @@ def visualize_path(grid, path, start, goal):
     grid[start[1], start[1]] = 3 # Mark the start
     grid[goal[0], goal[1]] = 4  # Mark the goal 
     
-    # Define a custom color map
+    # Define a custom color map 
     cmap = plt.cm.get_cmap('Accent', 5)
     bounds = [0, 1, 2, 3, 4]  
     norm = plt.Normalize(vmin=0, vmax=4)
