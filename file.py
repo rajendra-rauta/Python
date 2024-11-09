@@ -1,36 +1,31 @@
-# import os
-# f= open("demo.txt", "w")
+# Initialize variables
+largest = None
+smallest = None
 
-# # data =f.write("hello i am rajendra rauta i am doing  java now")
-# data = f.read()
-# new_data=data.replace("java", "python")
-# print(new_data) 
-      
+# Start the loop
+while True:
+    user_input = input("Enter a number (or 'done' to finish): ")
+    
+    # Exit the loop if 'done' is entered
+    if user_input == 'done':
+        break
+    
+    try:
+        # Try converting the input to an integer
+        num = int(user_input)
+        
+        # Update largest and smallest values
+        if largest is None or num > largest:
+            largest = num
+        if smallest is None or num < smallest: 
+            smallest = num
+    except ValueError:
+        # Handle invalid input (non-integer values)
+        print("Invalid input")
 
-# print(data) 
-# print(type(data))
-# f.close()
-
-
-# Prompt the user for hours worked and rate per hour
-hours = input("Enter Hours: ")
-rate = input("Enter Rate per Hour: ")
-
-# Convert input to float
-hours = float(hours)
-rate = float(rate)
-
-# Calculate gross pay
-if hours > 40:
-    # Calculate overtime pay for hours above 40
-    overtime_hours = hours - 40
-    overtime_pay = overtime_hours * (rate * 1.5)
-    regular_pay = 40 * rate
-    total_pay = regular_pay + overtime_pay
+# After the loop ends, print the results
+if largest is not None and smallest is not None:
+    print(f"Maximum is {largest}")
+    print(f"Minimum is {smallest}")
 else:
-    # No overtime, just regular pay
-    total_pay = hours * rate
-
-# Display the result
-print("Pay:", total_pay)
-
+    print("No valid numbers were entered.")
