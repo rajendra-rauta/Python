@@ -20,7 +20,7 @@ while True:
         if smallest is None or num < smallest: 
             smallest = num
     except ValueError:
-        # Handle invalid input (non-integer values)
+        # Handle invalid input (non-integer values) 
         print("Invalid input")
 
 # After the loop ends, print the results
