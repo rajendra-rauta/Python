@@ -16,7 +16,7 @@ while True:
         
         # Update largest and smallest values
         if largest is None or num > largest:
-            largest = num
+            largest = num 
         if smallest is None or num < smallest: 
             smallest = num
     except ValueError:
