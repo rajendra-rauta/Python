@@ -18,7 +18,7 @@ while True:
         if largest is None or num > largest:
             largest = num 
         if smallest is None or num < smallest: 
-            smallest = num
+            smallest = num 
     except ValueError:
         # Handle invalid input (non-integer values) 
         print("Invalid input")
