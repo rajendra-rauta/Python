@@ -33,5 +33,5 @@ if __name__ == "__main__":
     # Get the plus code for the given location
     plus_code = get_plus_code(location) 
     
-    # Print the results
+    # Print the results 
     print(f"Plus code {plus_code}")
