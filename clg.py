@@ -28,7 +28,7 @@ def get_plus_code(location):
 # Main program
 if __name__ == "__main__":
     # Get the location from the user input
-    location = "UNIVERSIDAD DE Buenos Aires"
+    location = "UNIVERSIDAD DE Buenos Aires" 
     
     # Get the plus code for the given location
     plus_code = get_plus_code(location) 
