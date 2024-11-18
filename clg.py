@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # Get the location from the user input
     location = "UNIVERSIDAD DE Buenos Aires" 
     
-    # Get the plus code for the given location
+    # Get the plus code for the given location 
     plus_code = get_plus_code(location) 
     
     # Print the results 
